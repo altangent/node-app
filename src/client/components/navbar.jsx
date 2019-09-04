@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import { Nav, Navbar, NavItem, NavLink, NavbarBrand, Collapse, NavbarToggler } from 'reactstrap';
 
 export class AppNav extends React.Component {
-  state = {
-    isOpen: false,
-  };
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+    };
+    this.toggle = this.toggle.bind(this);
+  }
 
-  toggle = () => {
+  toggle() {
     this.setState({ isOpen: !this.state.isOpen });
-  };
+  }
 
   render() {
     return (

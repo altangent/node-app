@@ -1,9 +1,9 @@
 const path = require('path');
-const winston = require('winston');
 const express = require('express');
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const serveStatic = require('serve-static');
+const winston = require('./logger');
 const app = express();
 const PORT = 8000;
 
@@ -17,8 +17,8 @@ app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../../public/index
 
 // eslint-disable-next-line
 app.use((err, req, res, next) => {
-  winston.error(err);
-  res.status(500).json(err);
+	winston.error(err);
+	res.status(500).json(err);
 });
 
 app.listen(PORT, () => winston.info(`express listening on ${PORT}`));
