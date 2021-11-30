@@ -63,5 +63,6 @@ typings/
 # prevent tls cert from making its way in here
 tls.cert
 
-# dist
 dist
+converage
+build
