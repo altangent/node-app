@@ -1,6 +1,6 @@
 {
     "name": "node-react-app",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Node react app",
     "keywords": [],
     "author": "Brian Mancini <bmancini@gmail.com>",
@@ -36,5 +36,6 @@
                 "babelify"
             ]
         ]
-    }
+    },
+    "templateVersion": "node-react-app:0.2.0"
 }
