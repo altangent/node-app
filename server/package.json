@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "../node_modules/.bin/ts-node src/Server.ts"
+        "start": "../node_modules/.bin/ts-node src/Server.ts",
+        "watch": "nodemon --watch \"src/**\" --ext \"ts\" --exec ../node_modules/.bin/ts-node src/Server.ts"
     },
     "keywords": [],
     "author": "",
@@ -20,5 +21,7 @@
         "express": "^4.17.1",
         "serve-static": "^1.14.1"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
