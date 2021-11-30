@@ -6,7 +6,8 @@
     "author": "Brian Mancini <bmancini@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "start": "cd server; npm start",
+        "bootstrap": "cd client; npm install; cd ../server; npm install; cd ../style; npm install;",
+        "start": "cd server; npm run start",
         "build": "cd client; npm run build; npm run compress; cd ../style; npm run build;",
         "watch": "echo \"Run individually\""
     },
