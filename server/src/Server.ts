@@ -20,17 +20,9 @@ app.use(bodyParser.json());
 
 app.get("*", (req, res) => res.sendFile(path.join(__dirname, "../../public/index.html")));
 
-// eslint-disable-next-line
-app.use(
-    (
-        err: Error,
-        req: express.Request,
-        res: express.Response,
-        next: express.ErrorRequestHandler,
-    ) => {
-        logger.error(err);
-        res.status(500).json(err);
-    },
-);
+app.use((err: Error, req: express.Request, res: express.Response) => {
+    logger.error(err);
+    res.status(500).json(err);
+});
 
 app.listen(PORT, () => logger.info(`express listening on ${PORT}`));

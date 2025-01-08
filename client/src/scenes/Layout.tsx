@@ -1,7 +1,8 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { AppNav } from "../components/AppNav";
-import { HomeScene } from "./home/HomeScene";
+import { HomeScene } from "./HomeScene";
+import { AboutScene } from "./AboutScene";
 
 export const Layout = () => {
     return (
@@ -11,8 +12,10 @@ export const Layout = () => {
                     <AppNav />
                 </div>
                 <div className="container mt-3">
-                    <Route exact={true} path="/" component={HomeScene} />
-                    <Switch>{/* other routes go here */}</Switch>
+                    <Routes>
+                        <Route path="/" element={<HomeScene />} />
+                        <Route path="/about" element={<AboutScene />}/>
+                    </Routes>
                 </div>
             </div>
             <footer className="footer">

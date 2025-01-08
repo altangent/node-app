@@ -4,27 +4,27 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "NODE_ENV=production browserify src/App.tsx -p [ tsify ] -o ./dist/app/bundle.js",
-        "compress": "uglifyjs -c -o ./dist/app/bundle.js ./dist/app/bundle.js",
-        "watch": "browserify src/App.tsx -p [ tsify ] -o ./dist/app/bundle.js && watchify src/App.tsx  -p [ tsify ] --debug -v -o ./dist/app/bundle.js"
+        "build": "webpack",
+        "compress": "webpack --mode=production",
+        "watch": "webpack -w"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@types/react": "^17.0.38",
-        "@types/react-dom": "^17.0.11",
-        "@types/react-router": "^5.1.18",
+        "ts-loader": "^9.5.1",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^6.0.1"
+    },
+    "dependencies": {
+        "@types/react": "^19.0.3",
+        "@types/react-dom": "^19.0.2",
+        "@types/react-router": "^5.1.20",
         "@types/react-router-dom": "^5.3.3",
-        "@types/reactstrap": "^8.7.2",
-        "browserify": "^17.0.0",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
-        "react-router": "^5.2.1",
-        "react-router-dom": "^5.3.0",
-        "reactstrap": "^8.10.1",
-        "tsify": "^5.0.4",
-        "uglify-es": "^3.3.9",
-        "watchify": "^4.0.0"
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-router": "^7.1.1",
+        "react-router-dom": "^7.1.1",
+        "reactstrap": "^9.2.3"
     }
 }

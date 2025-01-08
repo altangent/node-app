@@ -20,6 +20,11 @@ export const AppNav = () => {
                             Home
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink tag={Link} to="/about">
+                            About
+                        </NavLink>
+                    </NavItem>
                 </Nav>
             </Collapse>
         </Navbar>

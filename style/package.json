@@ -4,14 +4,15 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "node-sass -o dist/css --output-style compressed src/app.scss",
-        "watch": "node-sass -o dist/css src/app.scss && node-sass -w -o dist/css src/app.scss"
+        "build": "sass src/app.scss dist/css/app.css",
+        "watch": "sass -w src/app.scss dist/css/app.css"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "bootstrap": "^4.6.1",
-        "node-sass": "^7.0.1"
-    }
+        "bootstrap": "^5.3.3",
+        "sass": "^1.83.1"
+    },
+    "dependencies": {}
 }
